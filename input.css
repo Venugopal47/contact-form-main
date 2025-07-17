@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme{
+    --default-font-family:"Karla", sans-serif;
+    --color-green200: hsl(148, 38%, 91%);
+    --color-green600: hsl(169, 82%, 27%);
+    --color-red: hsl(0, 66%, 54%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey500: hsl(186, 15%, 59%);
+    --color-grey900: hsl(187, 24%, 22%);
+}
+
+html{
+    font-size: 1rem;
+}
+
+.required::after{
+    content:"*";
+    color:var(--color-green600);
+    margin-left: 0.5rem;
+}
+
+.success-box {
+  animation: fadeIn 0.3s ease-in;
+}
+.success-box.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}

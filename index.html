@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./output.css">
+  <title>Contact form</title>
+</head>
+<body class="flex justify-center items-center bg-green200 h-auto py-10">
+  <div class="w-[min(90%,50rem)] flex flex-col items-center">
+    <form id="myForm" class="bg-white rounded-2xl p-10 flex flex-col gap-8 self-stretch">
+      <h1 class="font-[700] text-3xl text-grey900">Contact Us</h1>
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 md:flex-row md:justify-between md:gap-4">
+          <div class="input-group flex flex-col gap-2 w-full">
+            <label class="required font-[400] text-grey900" for="first name">First Name</label>
+            <input class="text border border-green600 p-3 rounded-lg" type="text" name="first name" id="firstName">
+          </div>
+          <div class="input-group flex flex-col gap-2 w-full">
+            <label class="required font-[400] text-grey900" for="last name">Last Name</label>
+            <input class="text border border-green600 p-3 rounded-lg" type="text" name="last name" id="lastName">
+          </div>
+        </div>
+        <div class="input-group flex flex-col gap-2">
+          <label class="required font-[400] text-grey900" for="email">Email Address</label>
+          <input class="text border border-green600 p-3 rounded-lg" type="email" name="email address" id="email">
+        </div>
+        <div id="query" class="input-group flex flex-col gap-4">
+          <label class="required font-[400] text-grey900" for="query">Query Type</label>
+          <div class="flex flex-col gap-4 md:flex-row">
+            <div class="border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
+              <input class="w-4 h-4" type="radio" name="queryType" id="general-query" value="General Query">
+              <label class="font-[400] text-grey900 text-lg" for="general-query">General Enquiry</label>
+            </div>
+            <div class="border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
+              <input class="w-4 h-4" type="radio" name="queryType" id="support-request" value="Support Request">
+              <label class="font-[400] text-grey900 text-lg" for="support-request">Support Request</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-group flex flex-col gap-2 w-full">
+          <label class="required font-[400] text-grey900" for="message">Message</label>
+          <input type="text" class="text border border-grey500 border-t-green600 p-3 rounded-lg h-60 md:h-30" name="message" id="message">
+        </div>
+      </div>
+      <div id="consent" class="input-group flex flex-col gap-2">
+        <div class="flex flex-row gap-4 items-center">
+          <input class="w-5 h-5" type="checkbox" name="agree" id="agree" value="agreed">
+          <label class="required font-[400] text-grey900" for="agree">I consent to being contacted by the team</label>
+        </div>
+      </div>
+      <button id="submit" class="bg-green600 text-green200 p-4 rounded-lg font-[700] text-xl" type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
