@@ -3,7 +3,11 @@ const myForm = document.getElementById("myForm");
 const query = myForm.querySelector("#query");
 const consent = myForm.querySelector("#consent");
 const allInputs = myForm.querySelectorAll(".text");
+const radioInputs=myForm.querySelectorAll("input[type='radio']");
 
+radioInputs.forEach(input => {
+    input.addEventListener("change",addBackground);
+});
 submit.addEventListener("click", submitFormData);
 
 const firstNameRegex = /^[a-zA-Z\s]{5,12}$/;
@@ -16,6 +20,16 @@ let formData = { firstName: "", lastName: "", email: "", query: "", message: "",
 
 function getInputValue(input) {
     return input.value.trim();
+}
+
+function addBackground(e){
+    const input=e.target;
+    document.querySelectorAll(".radio-group").forEach(element => {
+        element.classList.remove("bg-green200");
+    });
+    if(input.checked){
+        input.closest(".radio-group").classList.add("bg-green200");
+    }
 }
 
 function createSuccessMessage() {
