@@ -12,7 +12,7 @@
 </head>
 <body class="flex justify-center items-center bg-green200 h-auto py-10">
   <div class="w-[min(90%,50rem)] flex flex-col items-center">
-    <form id="myForm" class="bg-white rounded-2xl p-10 flex flex-col gap-8 self-stretch">
+    <form id="myForm" class="bg-white rounded-2xl p-5 flex flex-col gap-8 self-stretch md:p-10">
       <h1 class="font-[700] text-3xl text-grey900">Contact Us</h1>
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-6 md:flex-row md:justify-between md:gap-4">
@@ -32,11 +32,11 @@
         <div id="query" class="input-group flex flex-col gap-4">
           <label class="required font-[400] text-grey900" for="query">Query Type</label>
           <div class="flex flex-col gap-4 md:flex-row">
-            <div class="border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
+            <div class="radio-group border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
               <input class="w-4 h-4" type="radio" name="queryType" id="general-query" value="General Query">
               <label class="font-[400] text-grey900 text-lg" for="general-query">General Enquiry</label>
             </div>
-            <div class="border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
+            <div class="radio-group border border-green600 p-3 rounded-lg w-full flex flex-row gap-4 items-center">
               <input class="w-4 h-4" type="radio" name="queryType" id="support-request" value="Support Request">
               <label class="font-[400] text-grey900 text-lg" for="support-request">Support Request</label>
             </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="input-group flex flex-col gap-2 w-full">
           <label class="required font-[400] text-grey900" for="message">Message</label>
-          <input type="text" class="text border border-grey500 border-t-green600 p-3 rounded-lg h-60 md:h-30" name="message" id="message">
+          <textarea id="message"name="message" class="text w-full p-3 rounded-md border border-grey300 focus:outline-none focus:border-green500 resize-none" rows="4"></textarea>
         </div>
       </div>
       <div id="consent" class="input-group flex flex-col gap-2">
